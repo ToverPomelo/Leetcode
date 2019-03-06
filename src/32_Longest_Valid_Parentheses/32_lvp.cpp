@@ -29,20 +29,14 @@ public:
 	}
 
 	void mergeTopNum(stack<int>& st){
-		while(st.size() >= 2){  //sum numbers
-			int lastTop = st.top();
-			st.pop();
-			int nowTop = st.top();
-			st.pop();
-			
-			if(bothNumber(lastTop,nowTop)){
-				st.push(lastTop+nowTop);
-			}else{
-				st.push(nowTop);
-				st.push(lastTop);
-				break;
-			}
-		}
+        if(st.empty() || !isNum(st.top())) return;
+        int tmpNum = st.top();
+        st.pop();
+        while(!st.empty() && isNum(st.top())){
+            tmpNum += st.top();
+            st.pop();
+        }
+        st.push(tmpNum);
 	}
 
     int longestValidParentheses(string s) {
@@ -59,33 +53,29 @@ public:
 					tmpNum = st.top();
 					st.pop();
 				}
-				//if(!st.empty()) cout<<(char)st.top();
 
-				if(!st.empty()) cout<<i2cFilter(st.top());
 				if(!st.empty() && i2cFilter(st.top())=='('){
 					st.pop();
-					//cout<<"test1: "<<tmpNum<<endl;
 					st.push(tmpNum+2);
-					//st.push(2);
 				}else{
 					if(tmpNum) st.push(tmpNum);
 					st.push(c2iFilter(si));
 				}
             }
         }
-		cout<<endl;
 
 		int result = 0;
 		while(!st.empty()){
 			mergeTopNum(st);
 
 			int top = st.top();
-			if(!isNum(top))
-				cout<<"test2: "<<i2cFilter(top)<<endl;
-			else{
+            if(isNum(top)){
 				result = max(result,top);
-				cout<<"test2: "<<top<<endl;
-			}
+				//cout<<"test2: "<<top<<endl;
+            }
+			//else{
+				//cout<<"test2: "<<i2cFilter(top)<<endl;
+			//}
 
 			st.pop();
 		}
