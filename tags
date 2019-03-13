@@ -19,14 +19,18 @@ Solution	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^class Solution {$/;"	c	
 bothNumber	src/32_Longest_Valid_Parentheses/32_lvp.cpp	/^	bool bothNumber(int last,int now){$/;"	f	class:Solution	typeref:typename:bool	file:
 c2iFilter	src/32_Longest_Valid_Parentheses/32_lvp.cpp	/^	int c2iFilter(char c){$/;"	f	class:Solution	typeref:typename:int	file:
 findMedianSortedArrays	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^        double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {$/;"	f	class:Solution	typeref:typename:double	file:
+getMid	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		double getMid(int len1,int len2){$/;"	f	class:Solution	typeref:typename:double	file:
 head_v	src/33_Search_in_Rotated_Sorted_Array/33_sirsa_iter.cpp	/^		int head_v;$/;"	m	class:Solution	typeref:typename:int	file:
 head_v	src/33_Search_in_Rotated_Sorted_Array/33_sirsa_rec.cpp	/^		int head_v;$/;"	m	class:Solution	typeref:typename:int	file:
 i2cFilter	src/32_Longest_Valid_Parentheses/32_lvp.cpp	/^	char i2cFilter(int i){$/;"	f	class:Solution	typeref:typename:char	file:
 isNum	src/32_Longest_Valid_Parentheses/32_lvp.cpp	/^	bool isNum(int i){$/;"	f	class:Solution	typeref:typename:bool	file:
+left	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		int left;$/;"	m	class:Solution	typeref:typename:int	file:
 lengthOfLongestSubstring	src/3_Longest_Substring_Without_Repeating_Characters/3_lswrc.cpp	/^        int lengthOfLongestSubstring(string s) {$/;"	f	class:Solution	typeref:typename:int	file:
 lengthOfLongestSubstring	src/3_Longest_Substring_Without_Repeating_Characters/test.cpp	/^        int lengthOfLongestSubstring(string s) {$/;"	f	class:Solution	typeref:typename:int	file:
 listMax	src/11_Container_With_Most_Water/11_cwmw_trival.cpp	/^        int listMax(int* arr,int len){$/;"	f	class:Solution	typeref:typename:int	file:
 longestValidParentheses	src/32_Longest_Valid_Parentheses/32_lvp.cpp	/^    int longestValidParentheses(string s) {$/;"	f	class:Solution	typeref:typename:int	file:
+lv1	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		int lv1,rv1,lv2,rv2;  \/\/index$/;"	m	class:Solution	typeref:typename:int	file:
+lv2	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		int lv1,rv1,lv2,rv2;  \/\/index$/;"	m	class:Solution	typeref:typename:int	file:
 main	src/11_Container_With_Most_Water/11_cwmw_trival.cpp	/^int main(){$/;"	f	typeref:typename:int
 main	src/32_Longest_Valid_Parentheses/32_lvp.cpp	/^int main(){$/;"	f	typeref:typename:int
 main	src/33_Search_in_Rotated_Sorted_Array/33_sirsa_iter.cpp	/^int main(){$/;"	f	typeref:typename:int
@@ -38,10 +42,21 @@ max	src/11_Container_With_Most_Water/11_cwmw_trival.cpp	/^        int max(int a,
 max	src/32_Longest_Valid_Parentheses/32_lvp.cpp	/^    int max(int a,int b){$/;"	f	class:Solution	typeref:typename:int	file:
 max	src/3_Longest_Substring_Without_Repeating_Characters/3_lswrc.cpp	/^        int max(int a,int b){$/;"	f	class:Solution	typeref:typename:int	file:
 max	src/3_Longest_Substring_Without_Repeating_Characters/test.cpp	/^        int max(int a,int b){$/;"	f	class:Solution	typeref:typename:int	file:
+max	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		int max(int a,int b){$/;"	f	class:Solution	typeref:typename:int	file:
 maxArea	src/11_Container_With_Most_Water/11_cwmw_trival.cpp	/^        int maxArea(vector<int>& height) {$/;"	f	class:Solution	typeref:typename:int	file:
 mergeTopNum	src/32_Longest_Valid_Parentheses/32_lvp.cpp	/^	void mergeTopNum(stack<int>& st){$/;"	f	class:Solution	typeref:typename:void	file:
 min	src/11_Container_With_Most_Water/11_cwmw_trival.cpp	/^        int min(int a,int b){$/;"	f	class:Solution	typeref:typename:int	file:
+ml1	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		int ml1,mr1,ml2,mr2;  \/\/index$/;"	m	class:Solution	typeref:typename:int	file:
+ml2	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		int ml1,mr1,ml2,mr2;  \/\/index$/;"	m	class:Solution	typeref:typename:int	file:
+mr1	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		int ml1,mr1,ml2,mr2;  \/\/index$/;"	m	class:Solution	typeref:typename:int	file:
+mr2	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		int ml1,mr1,ml2,mr2;  \/\/index$/;"	m	class:Solution	typeref:typename:int	file:
+real1	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		bool real1,real2;  \/\/0->num1 ; 1->num2$/;"	m	class:Solution	typeref:typename:bool	file:
+real2	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		bool real1,real2;  \/\/0->num1 ; 1->num2$/;"	m	class:Solution	typeref:typename:bool	file:
+reduce	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		void reduce(vector<int>* nums1,vector<int>* nums2){$/;"	f	class:Solution	typeref:typename:void	file:
+refreshM	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		void refreshM(){  $/;"	f	class:Solution	typeref:typename:void	file:
 repeat	src/3_Longest_Substring_Without_Repeating_Characters/3_lswrc.cpp	/^        bool repeat(string s,char c){$/;"	f	class:Solution	typeref:typename:bool	file:
+rv1	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		int lv1,rv1,lv2,rv2;  \/\/index$/;"	m	class:Solution	typeref:typename:int	file:
+rv2	src/4_Median_of_Two_Sorted_Arrays/4_motsa.cpp	/^		int lv1,rv1,lv2,rv2;  \/\/index$/;"	m	class:Solution	typeref:typename:int	file:
 search	src/33_Search_in_Rotated_Sorted_Array/33_sirsa_iter.cpp	/^		int search(vector<int>& nums, int target){$/;"	f	class:Solution	typeref:typename:int	file:
 search	src/33_Search_in_Rotated_Sorted_Array/33_sirsa_rec.cpp	/^		int search(vector<int>& nums, int target){$/;"	f	class:Solution	typeref:typename:int	file:
 search_rec	src/33_Search_in_Rotated_Sorted_Array/33_sirsa_rec.cpp	/^		int search_rec(vector<int>& nums, int head, int tail, int target){$/;"	f	class:Solution	typeref:typename:int	file:
