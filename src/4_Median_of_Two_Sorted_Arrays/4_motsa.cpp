@@ -18,30 +18,17 @@ class Solution {
 			return a>b ? a : b;
 		}
 		
-		bool refreshM(){  
-			/*
-			if(real1!=real2 && lv1>=rv1){
-				real1 = 1;
-				return 1;
-			}
-			if(real1!=real2 && lv2>=rv2){
-				real2 = 0;
-				return 1;
-			}
-			*/
-
+		void refreshM(){  
 			ml1 = lv1+(rv1-lv1)/2;
 			mr1 = rv1-(rv1-lv1)/2;
 			ml2 = lv2+(rv2-lv2)/2;
 			mr2 = rv2-(rv2-lv2)/2;
-
-			return 0;
 		}
 
-		void cut1(vector<int>* v1,vector<int>* v2,bool single){
+		void cut1(vector<int>* v1,vector<int>* v2){
 			if((*v1)[ml1] < (*v2)[ml2]){  //ml1 is 1
 				left += mr1-lv1;
-				if(single){
+				if(real1!=real2 && lv1>=rv1){
 					lv1 = lv2;
 					rv1 = mr2;
 					lv2 = ml2;
@@ -50,7 +37,7 @@ class Solution {
 				}
 			}else{  //ml2 is 1
 				left += mr2-lv2;
-				if(single){
+				if(real1!=real2 && lv2>=rv2){
 					lv2 = lv1;
 					rv2 = mr1;
 					lv1 = ml1;
@@ -61,10 +48,10 @@ class Solution {
 
 		}
 
-		void cut4(vector<int>* v1,vector<int>* v2,bool single){
+		void cut4(vector<int>* v1,vector<int>* v2){
 			if((*v1)[mr1] > (*v2)[mr2]){  //mr1 is 4
 				right += rv1-ml1;
-				if(single){
+				if(real1!=real2 && lv1>=rv1){
 					lv1 = ml2;
 					rv1 = rv2;
 					rv2 = mr2;
@@ -73,7 +60,7 @@ class Solution {
 				}
 			}else{  //mr2 is 4
 				right += rv2-ml2;
-				if(single){
+				if(real1!=real2 && lv2>=rv2){
 					lv2 = ml1;
 					rv2 = rv1;
 					rv1 = mr1;
@@ -90,21 +77,19 @@ class Solution {
             else v1 = nums1;
             if(real2) v2 = nums2;
             else v2 = nums1;
-			bool single = refreshM();
 
             cout<<"real1 : "<<real1<<" ,real2 : "<<real2<<endl; 
             cout<<"test2: "<<lv1<<","<<rv1<<","<<lv2<<","<<rv2<<endl;
             cout<<"test3: "<<ml1<<","<<mr1<<","<<ml2<<","<<mr2<<endl;
 			cout<<"left  : "<<left<<" ,right  : "<<right<<endl; 
-			cout<<single<<endl;
 			
 			if(left < right){  //cut 1
-				cut1(v1,v2,single);
+				cut1(v1,v2);
 			}else if(left > right){  //cut 4
-				cut4(v1,v2,single);
+				cut4(v1,v2);
 			}else{  //random
-				if(rand()%2) cut1(v1,v2,single);
-				else cut4(v1,v2,single);
+				if(rand()%2) cut1(v1,v2);
+				else cut4(v1,v2);
 			}
 		}
 		
@@ -121,6 +106,7 @@ class Solution {
 			
 			int mid = getMid(nums1.size(),nums2.size());
 			while(left!=mid || right!=mid){
+                refreshM();
                 cut(&nums1,&nums2);				
 			}
             //cout<<"test1: "<<real1<<" , "<<real2<<endl;
@@ -148,7 +134,7 @@ class Solution {
 };
 
 int main(){
-	vector<int> v1 = {1,2,3};
+	vector<int> v1 = {1,2};
 	vector<int> v2 = {4,5,6};
 
 	Solution* s = new Solution();
